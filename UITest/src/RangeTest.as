@@ -39,7 +39,8 @@ package
 			addElement(group);
 			
 			_progressBar = new ProgressBar();
-			_progressBar.width = 150;
+			_progressBar.width = 200;
+			_progressBar.height = 35;
 			group.addElement(_progressBar);
 			
 			var hScrollBar:HScrollBar = new HScrollBar();
