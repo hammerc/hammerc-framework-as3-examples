@@ -20,6 +20,7 @@ package
 			var window:TitleWindow = new TitleWindow();
 			window.width = 300;
 			window.height = 300;
+			window.title = "我是窗口";
 			
 			PopUpManager.addPopUp(window);
 		}

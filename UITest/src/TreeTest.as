@@ -47,6 +47,7 @@ package
 				]
 			};
 			
+			//在赋值到 tree 组件之前必须调用该方法
 			ObjectCollection.assignParent(obj);
 			
 			var data:ObjectCollection = new ObjectCollection();

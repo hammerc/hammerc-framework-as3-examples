@@ -25,7 +25,11 @@ package
 			panel.height = 300;
 			addElement(panel);
 			
-			panel.addElement(new Button());
+			var btn:Button = new Button();
+			btn.top = 20;
+			btn.horizontalCenter = 0;
+			btn.label = "测试";
+			panel.addElement(btn);
 		}
 	}
 }
