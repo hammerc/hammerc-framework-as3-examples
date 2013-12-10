@@ -8,7 +8,9 @@ package
 	import org.hammerc.components.HScrollBar;
 	import org.hammerc.components.HSlider;
 	import org.hammerc.components.Label;
+	import org.hammerc.components.NumericStepper;
 	import org.hammerc.components.ProgressBar;
+	import org.hammerc.components.Spinner;
 	import org.hammerc.components.VScrollBar;
 	import org.hammerc.components.VSlider;
 	import org.hammerc.layouts.HorizontalAlign;
@@ -75,6 +77,22 @@ package
 			vsLabel.text = vSlider.value + "/" + vSlider.maximum;
 			group.addElement(vsLabel);
 			
+			var spinner:Spinner = new Spinner();
+			spinner.addEventListener(Event.CHANGE, spinnerChangeHandler);
+			group.addElement(spinner);
+			
+			var spinnerLabel:Label = new Label();
+			spinnerLabel.text = spinner.value + "/" + spinner.maximum;
+			group.addElement(spinnerLabel);
+			
+			var ns:NumericStepper = new NumericStepper();
+			ns.addEventListener(Event.CHANGE, nsChangeHandler);
+			group.addElement(ns);
+			
+			var nsLabel:Label = new Label();
+			nsLabel.text = ns.value + "/" + ns.maximum;
+			group.addElement(nsLabel);
+			
 			addEventListener(Event.ENTER_FRAME, enterFrameHandler);
 			
 			function hsbChangeHandler(event:Event):void
@@ -95,6 +113,16 @@ package
 			function vsChangeHandler(event:Event):void
 			{
 				vsLabel.text = vSlider.value + "/" + vSlider.maximum;
+			}
+			
+			function spinnerChangeHandler(event:Event):void
+			{
+				spinnerLabel.text = spinner.value + "/" + spinner.maximum;
+			}
+			
+			function nsChangeHandler(event:Event):void
+			{
+				nsLabel.text = ns.value + "/" + ns.maximum;
 			}
 		}
 		
