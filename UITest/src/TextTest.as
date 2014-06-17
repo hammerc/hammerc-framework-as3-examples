@@ -13,7 +13,7 @@ package
 	{
 		public function TextTest()
 		{
-			super();
+			super(false);
 		}
 		
 		override protected function createChildren():void

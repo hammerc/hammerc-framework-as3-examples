@@ -16,7 +16,7 @@ package
 	{
 		public function ButtonTest()
 		{
-			super();
+			super(false);
 		}
 		
 		override protected function createChildren():void

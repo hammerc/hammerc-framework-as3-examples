@@ -8,6 +8,7 @@ package
 	import org.hammerc.components.Button;
 	import org.hammerc.components.Label;
 	import org.hammerc.components.TabBar;
+	import org.hammerc.components.TabBarButton;
 	import org.hammerc.components.TextArea;
 	import org.hammerc.components.ViewStack;
 	import org.hammerc.core.UIComponent;
@@ -18,7 +19,7 @@ package
 	{
 		public function TabBarTest()
 		{
-			super();
+			super(false);
 		}
 		
 		private var _view1:ViewStack;
@@ -28,6 +29,7 @@ package
 			super.createChildren();
 			
 			var tabBar:TabBar = new TabBar();
+			tabBar.itemRenderer = TabBarButton;
 			tabBar.x = 100;
 			tabBar.y = 10;
 			//tabBar.dataProvider = new ArrayCollection(["选项1", "选项2", "选项3", "选项4"]);
@@ -48,6 +50,7 @@ package
 			_view1.addElement(new Button());
 			
 			tabBar = new TabBar();
+			tabBar.itemRenderer = TabBarButton;
 			tabBar.x = 400;
 			tabBar.y = 10;
 			addElement(tabBar);

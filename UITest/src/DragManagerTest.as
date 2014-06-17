@@ -27,7 +27,7 @@ package
 		
 		public function DragManagerTest()
 		{
-			super();
+			super(false);
 		}
 		
 		override protected function createChildren():void

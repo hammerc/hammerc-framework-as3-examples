@@ -10,7 +10,7 @@ package
 	{
 		public function PanelTest()
 		{
-			super();
+			super(false);
 		}
 		
 		override protected function createChildren():void

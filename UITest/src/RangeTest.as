@@ -23,7 +23,7 @@ package
 		
 		public function RangeTest()
 		{
-			super();
+			super(false);
 		}
 		
 		override protected function createChildren():void

@@ -15,7 +15,7 @@ package
 	{
 		public function AlertTest()
 		{
-			super();
+			super(false);
 		}
 		
 		override protected function createChildren():void

@@ -5,13 +5,14 @@ package
 	import org.hammerc.collections.ObjectCollection;
 	import org.hammerc.collections.XMLCollection;
 	import org.hammerc.components.Tree;
+	import org.hammerc.components.TreeItemRenderer;
 	
 	[SWF(width=800, height=600)]
 	public class TreeTest extends AppContainer
 	{
 		public function TreeTest()
 		{
-			super();
+			super(false);
 		}
 		
 		override protected function createChildren():void
@@ -58,6 +59,7 @@ package
 			tree.y = 100;
 			tree.width = 200;
 			tree.height = 300;
+			tree.itemRenderer = TreeItemRenderer;
 			tree.dataProvider = data;
 			addElement(tree);
 			
@@ -80,6 +82,7 @@ package
 			tree.y = 100;
 			tree.width = 200;
 			tree.height = 300;
+			tree.itemRenderer = TreeItemRenderer;
 			tree.dataProvider = xmlc;
 			tree.labelField = "@name";
 			addElement(tree);

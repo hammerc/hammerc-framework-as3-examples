@@ -11,7 +11,7 @@ package
 	{
 		public function DropDownListTest()
 		{
-			super();
+			super(false);
 		}
 		
 		override protected function createChildren():void

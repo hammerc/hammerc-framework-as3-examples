@@ -26,7 +26,7 @@ package
 		
 		public function StyleTest()
 		{
-			super();
+			super(true);
 		}
 		
 		override protected function createChildren():void
