@@ -19,7 +19,7 @@ package
 		
 		public static const NODE_SIZE:int = 6;
 		
-		public static const OBSTACLE_NUM:int = 1000;
+		public static const OBSTACLE_NUM:int = 1500;
 		
 		public static const BORDER_COLOR:uint = 0x999999;
 		public static const WALKABLE_COLOR:uint = 0x00ff00;
@@ -71,7 +71,9 @@ package
 				_grid.setWalkable(int(Math.random() * COL), int(Math.random() * ROW), false);
 			}
 			
+			var time:int = getTimer();
 			_grid.cacheAroundLinks();
+			trace("初始化格子耗时：" + (getTimer() - time) + "毫秒！");
 			
 			_content.graphics.clear();
 			_content.graphics.lineStyle(0, BORDER_COLOR);
