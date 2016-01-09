@@ -9,7 +9,7 @@ package
 	
 	import org.hammerc.archer.bt.BehaviorTree;
 	
-	[SWF(width="800", height="600")]
+	[SWF(width="800", height="600", frameRate="60")]
 	public class BTTest extends Sprite
 	{
 		private var _shape:Shape = new Shape();

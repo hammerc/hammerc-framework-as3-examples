@@ -8,6 +8,7 @@ package bt
 	import org.hammerc.archer.bt.composites.RandomSelector;
 	import org.hammerc.archer.bt.composites.Selector;
 	import org.hammerc.archer.bt.composites.Sequence;
+	import org.hammerc.archer.bt.decorators.Invert;
 	
 	public final class BTCreator
 	{
@@ -26,10 +27,11 @@ package bt
 			_sequenceTest.addChild(new RotateAction("rotate action"));
 			_sequenceTest.addChild(new MoveRightAction("move right action"));
 			
+			//通过反转结果可以选择下一个节点
 			_selectorTest = new Selector("selector test");
-			_selectorTest.addChild(new MoveLeftAction("move left action"));
-			_selectorTest.addChild(new RotateAction("rotate action"));
-			_selectorTest.addChild(new MoveRightAction("move right action"));
+			_selectorTest.addChild(new Invert("invert test", new MoveLeftAction("move left action")));
+			_selectorTest.addChild(new Invert("invert test", new RotateAction("rotate action")));
+			_selectorTest.addChild(new Invert("invert test", new MoveRightAction("move right action")));
 			
 			_selectorRandomTest = new RandomSelector("random selector test");
 			_selectorRandomTest.addChild(new MoveLeftAction("move left action"));
