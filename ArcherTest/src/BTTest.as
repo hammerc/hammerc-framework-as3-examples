@@ -50,7 +50,13 @@ package
 			//sequenceTest
 			//_tree.root = BTCreator.sequenceTest;
 			//selectorTest
-			_tree.root = BTCreator.selectorTest;
+			//_tree.root = BTCreator.selectorTest;
+			//selectorRandomTest
+			//_tree.root = BTCreator.selectorRandomTest;
+			//parallelTest
+			_tree.root = BTCreator.parallelTest;
+			
+			_tree.printTreeStructure();
 			
 			addEventListener(Event.ENTER_FRAME, enterFrameHandler);
 			_lastTime = getTimer();
